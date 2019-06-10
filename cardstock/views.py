@@ -1,6 +1,6 @@
 from rest_framework import viewsets
 from .models import Card
-from .serializers import CardSerializer
+from .serializers import CardPolymorphicSerializer
 
 
 class CardViewSet(viewsets.ModelViewSet):
@@ -8,4 +8,4 @@ class CardViewSet(viewsets.ModelViewSet):
     API endpoint that allows cards to be viewed or edited.
     """
     queryset = Card.objects.all()
-    serializer_class = CardSerializer
+    serializer_class = CardPolymorphicSerializer
